@@ -10,8 +10,8 @@ int main() {
     for (int i = 0; i <= 10; ++i) {
         const double k = 0.1*i;
         sim->set_k(k);
-        launch(k, basic_pref, [&sim, step]() { return sim->basic_euler(step); });
-        launch(k, better_pref, [&sim, step]() { return sim->better_euler(step); });
+        launch(k, basic_pref, [&sim]() { return sim->basic_euler(step); });
+        launch(k, better_pref, [&sim]() { return sim->better_euler(step); });
     }
     return 0;
 }
