@@ -1,5 +1,3 @@
-#include <cstdlib>
-#include <filesystem>
 #include "euler.h"
 #include "save_data.h"
 
@@ -15,8 +13,5 @@ int main() {
         launch(k, basic_pref, [&sim, step]() { return sim->basic_euler(step); });
         launch(k, better_pref, [&sim, step]() { return sim->better_euler(step); });
     }
-    const std::filesystem::path script_path = std::filesystem::current_path() / "../src/viz.py";
-    const string command = "python3 " + script_path.string();
-    system(command.c_str());
     return 0;
 }
