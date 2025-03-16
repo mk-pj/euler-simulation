@@ -1,6 +1,5 @@
 #include <cstdlib>
 #include <filesystem>
-#include <fmt/ranges.h>
 #include "euler.h"
 #include "save_data.h"
 
