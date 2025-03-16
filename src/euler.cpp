@@ -44,7 +44,7 @@ pair<vector<double>, vector<double> > EulerSimulation::basic_euler(double dt, co
         ax = -1 * this->k_m * vx;
         ay = g - this->k_m * vy;
     }
-    return pair {X, Y };
+    return pair { X, Y };
 }
 
 pair<vector<double>, vector<double>> EulerSimulation::better_euler(double dt, const int max_iter) const {
@@ -85,8 +85,7 @@ pair<vector<double>, vector<double>> EulerSimulation::better_euler(double dt, co
         ax = -1 * this->k_m * vx;
         ay = g - this->k_m * vy;
     }
-    return pair {X, Y };
-
+    return pair { X, Y };
 }
 
 void EulerSimulation::set_k(const double k) {

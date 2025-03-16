@@ -13,8 +13,8 @@ public:
     EulerSimulation(double, double, double, double, double, double=1.0);
     void set_k(double k);
     [[nodiscard]] double get_k() const;
-    [[nodiscard]] pair<vector<double>, vector<double>> basic_euler(double, int=100000) const;
-    [[nodiscard]] pair<vector<double>, vector<double>> better_euler(double, int=100000) const;
+    [[nodiscard]] pair<vector<double>, vector<double>> basic_euler(double, int=1e8) const;
+    [[nodiscard]] pair<vector<double>, vector<double>> better_euler(double, int=1e8) const;
 private:
     double k;
     double k_m;

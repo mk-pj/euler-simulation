@@ -4,7 +4,7 @@
 #include "save_data.h"
 
 int main() {
-    double step = 0.05;
+    constexpr double step = 0.05;
     const string basic_pref = "basic";
     const string better_pref = "better";
                                        //m  x  y  vx vy
