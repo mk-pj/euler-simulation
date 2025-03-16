@@ -6,8 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(include)
 
-find_package(Python3 REQUIRED)
-
 add_executable(
         psm2
         src/main.cpp
@@ -15,8 +13,3 @@ add_executable(
         src/save_data.cpp
 )
 
-add_custom_command(
-        TARGET psm2 POST_BUILD
-        COMMAND $<TARGET_FILE:psm2>
-        COMMAND ${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/src/viz.py
-)
